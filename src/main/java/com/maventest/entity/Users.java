@@ -1,4 +1,4 @@
-package com.maventest;
+package com.maventest.entity;
 
 import jakarta.persistence.*;
 
