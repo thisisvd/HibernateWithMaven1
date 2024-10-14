@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!--SQL Driver, connection, username & password -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/myhibernate</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">thisisvd</property>
+        <!--SQL Language dialect if Postgres then postgres dialect, SQL Dialect etc-->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!--If table is not created then will create-->
+        <!--If [create] : will crete table every time-->
+        <!--If [update] : will crete table if not present otherwise will not create-->
+        <property name="hbm2ddl.auto">create</property>
+        <!--Will show sql queries also-->
+        <property name="show_sql">true</property>
+
+        <!--We have to map entity classes here using class if we are using annotations-->
+        <!--If we are using xml classes for entity then use resource instead of class-->
+        <mapping class="com.maventest.Users" />
+    </session-factory>
+</hibernate-configuration>
