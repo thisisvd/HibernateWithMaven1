@@ -6,8 +6,8 @@ import jakarta.persistence.*;
 // @Entity
 // @Entity(name = "users")
 @Entity
-@Table(name = "user_details")
-public class Users {
+@Table(name = "user_embedded")
+public class UsersEmbedded {
 
     @Id
     @GeneratedValue
@@ -21,11 +21,12 @@ public class Users {
 
     // Embedded class
     // Will create column in db present in this class
+    // variable for this class will be column in this table
     private UserWishlist userWishlist;
 
-    public Users() {}
+    public UsersEmbedded() {}
 
-    public Users(int userId, String userName, String userEmail, String address) {
+    public UsersEmbedded(int userId, String userName, String userEmail, String address) {
         this.userId = userId;
         this.userName = userName;
         this.userEmail = userEmail;

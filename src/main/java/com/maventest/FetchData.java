@@ -23,7 +23,21 @@ public class FetchData {
         Users user = session.get(Users.class, 1);
         System.out.println("get() : " + user.toString());
 
-        UserOrder order = session.load(UserOrder.class, 2);
+        // for null values
+        // Users user1 = session.get(Users.class, 11);
+        // will not call 2 sql queries for same id will fetch data from cache
+        // Users user1 = session.get(Users.class, 1);
+        // the below line will also call the sql query
+        Users user1 = session.get(Users.class, 2);
+        System.out.println("get() : " + user1.toString());
+
+        // load() is deprecated so use getReference
+        // UserOrder order = session.load(UserOrder.class, 2);
+        UserOrder order = session.getReference(UserOrder.class, 2);
+        // the above line will not call sql query
+        // UserOrder order = session.getReference(UserOrder.class, 22);
+
+        // When the below object is called sql query is called
         System.out.println("load() : " + order.toString());
 
         // close all components
