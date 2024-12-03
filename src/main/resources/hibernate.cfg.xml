@@ -33,5 +33,7 @@
 
         <mapping class="com.mapping.oneToMany.entity.Question" />
         <mapping class="com.mapping.oneToMany.entity.Answer" />
+
+        <mapping class="com.states.entity.Student" />
     </session-factory>
 </hibernate-configuration>
