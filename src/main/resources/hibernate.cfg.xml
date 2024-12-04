@@ -11,13 +11,13 @@
         <property name="connection.url">jdbc:mysql://localhost:3306/myhibernate</property>
         <property name="connection.username">root</property>
         <property name="connection.password">thisisvd</property>
-        <!--SQL Language dialect if Postgres then postgres dialect, SQL Dialect etc-->
+        <!--SQL Language dialect : if Postgres then postgres dialect, SQL Dialect etc-->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <!--If table is not created then will create-->
         <!--If [create] : will crete table every time-->
         <!--If [update] : will crete table if not present otherwise will not create-->
         <property name="hbm2ddl.auto">create</property>
-        <!--Will show sql queries also-->
+        <!--Will show sql queries & format the sql shown way in different lines-->
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
