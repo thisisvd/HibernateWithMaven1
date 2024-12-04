@@ -16,7 +16,7 @@
         <!--If table is not created then will create-->
         <!--If [create] : will crete table every time-->
         <!--If [update] : will crete table if not present otherwise will not create-->
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
         <!--Will show sql queries also-->
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>

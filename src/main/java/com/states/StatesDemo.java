@@ -33,13 +33,14 @@ public class StatesDemo {
         session.persist(student);
         // same obj value is updated here
         student.setStudentName("Kelly bottom");
-        // commit values
-        transaction.commit();
 
         // [Removed State]
         // value will be removed from db, but still associated with session
         // first get() the vale from db and then call delete() or remove()
         // session.remove();
+
+        // commit values to make changes in db
+        transaction.commit();
 
         // [Detached State]
         // obj is not associated with session anymore
