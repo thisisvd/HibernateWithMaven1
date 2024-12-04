@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Date;
@@ -26,7 +25,7 @@ public class App {
         // Adding user
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
-        // Open a session first then we can use currentSession() object
+        // Open a session first, then we can use currentSession() object
         Session session = sessionFactory.openSession();
         // Start a transaction
         Transaction transaction = session.beginTransaction();
@@ -63,5 +62,6 @@ public class App {
         transaction.commit();
         // Close session
         session.close();
+        sessionFactory.close();
     }
 }

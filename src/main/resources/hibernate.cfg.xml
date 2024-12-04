@@ -14,14 +14,14 @@
         <!--SQL Language dialect : if Postgres then postgres dialect, SQL Dialect etc-->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <!--If table is not created then will create-->
-        <!--If [create] : will crete table every time-->
+        <!--If [create] : will crete new table every time & delete existing ones-->
         <!--If [update] : will crete table if not present otherwise will not create-->
         <property name="hbm2ddl.auto">create</property>
         <!--Will show sql queries & format the sql shown way in different lines-->
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
-        <!--We have to map entity classes here using class if we are using annotations-->
+        <!--We have to map each & every entity classes here, using class if we are using annotations-->
         <!--If we are using xml classes for entity then use resource instead of class-->
         <mapping class="com.maventest.entity.UserWishlist" />
         <mapping class="com.maventest.entity.UserOrder" />
