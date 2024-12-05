@@ -16,6 +16,7 @@ public class Answer {
 //    @JoinColumn(name = "quest_id")
     @OneToOne(mappedBy = "answer")
     // here [mappedBy] means only answer class will be mapped so question column will not be formed
+    // This class will not form any extra foreign key & will just create its personal columns
     private Question question;
 
     public Answer() {}
