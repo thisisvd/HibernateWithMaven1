@@ -16,7 +16,7 @@
         <!--If table is not created then will create-->
         <!--If [create] : will crete new table every time & delete existing ones-->
         <!--If [update] : will crete table if not present otherwise will not create-->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <!--Will show sql queries & format the sql shown way in different lines-->
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
@@ -38,5 +38,10 @@
         <mapping class="com.mapping.manyToMany.entity.Project" />
 
         <mapping class="com.states.entity.Student" />
+
+        <mapping class="com.cascade.entity.Question" />
+        <mapping class="com.cascade.entity.Answer" />
+
+        <mapping resource="xml/Person.hbm.xml" />
     </session-factory>
 </hibernate-configuration>
