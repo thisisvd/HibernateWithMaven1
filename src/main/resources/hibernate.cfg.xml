@@ -21,6 +21,11 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
+        <!--Enable second level cache [only for 2nd level caching]-->
+<!--        <property name="cache.use_second_level_cache">true</property>-->
+<!--        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>-->
+
+
         <!--We have to map each & every entity classes here, using class if we are using annotations-->
         <!--If we are using xml classes for entity then use resource instead of class-->
         <mapping class="com.maventest.entity.UserWishlist" />
